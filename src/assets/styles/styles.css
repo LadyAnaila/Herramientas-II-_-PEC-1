@@ -1,0 +1,310 @@
+@charset "UTF-8";
+/************************************
+        FUENTES Y COLORES
+************************************/
+/*Iconos*/
+@import '../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
+/*Fuentes*/
+@import url("https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@300&family=Libre+Franklin:wght@400;700&family=Montserrat:wght@100;400&family=Roboto:wght@900&family=Satisfy&display=swap");
+/*Colores*/
+:root {
+  --text-color: #2a2a2a;
+  --accent-color: #13100b;
+  --contrast-color: #522d00;
+  --accent-light-color: #fec399;
+  --contrast-light-color: #ffffff;
+  --bg-body-color: #ffe6d1;
+}
+
+/************************************
+        ESTILOS GENERALES
+************************************/
+* {
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  line-height: 1.5;
+  font-family: "Montserrat", sans-serif;
+}
+
+.main-info {
+  padding-bottom: 4rem;
+  margin: 0 auto;
+  max-width: 90%;
+}
+@media (min-width: 767px) {
+  .main-info {
+    max-width: 80%;
+  }
+}
+@media (min-width: 1000px) {
+  .main-info {
+    max-width: 60%;
+  }
+}
+
+.main-general {
+  padding: 2rem 0;
+}
+
+h1 {
+  font-family: "Libre Baskerville Bold", serif;
+  font-size: 3rem;
+  padding: 3rem 3rem 3rem 3rem;
+}
+
+h2 {
+  font-family: "Libre Baskerville Bold", serif;
+  font-size: 2rem;
+  padding: 1rem;
+}
+
+h3 {
+  font-family: "Libre Baskerville Bold", serif;
+  padding: 1rem;
+}
+
+h1,
+h2,
+h3 {
+  text-align: center;
+}
+
+p,
+li {
+  font-size: 1rem;
+  padding: 0.6rem 0rem;
+}
+
+@media (min-width: 767px) {
+  h1 {
+    font-size: 5rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  h3 {
+    font-size: 2rem;
+  }
+  p,
+  li {
+    font-size: 1.5rem;
+  }
+}
+blockquote > p {
+  font-family: "quote", cursive;
+  font-size: 1.4rem;
+}
+
+/************************************
+            ENLACES
+************************************/
+a {
+  color: var(--contrast-color);
+}
+
+figcaption > a {
+  color: var(--contrast-color);
+}
+
+a:hover {
+  background-color: var(--accent-light-color);
+}
+
+figcaption > a:hover {
+  background-color: var(--accent-light-color);
+}
+
+/************************************
+            HEADER
+************************************/
+.nav-main .container {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 2rem;
+}
+.nav-menu .nav-item,
+.nav-menu .nav-item-active {
+  font-weight: 600;
+  flex: 1;
+  text-align: center;
+}
+.nav-menu .nav-item-active {
+  background-color: var(--bg-body-color);
+}
+.nav-menu .nav-link {
+  color: var(--text-color);
+  line-height: 1em;
+}
+.nav-menu .nav-link:hover,
+.nav-menu .nav-link-active:hover {
+  background-color: var(--accent-light-color);
+}
+
+@media (min-width: 767px) {
+  .nav-menu {
+    display: flex;
+  }
+}
+@media (min-width: 767px) {
+  .nav-item:not(:last-child), .nav-item-active:not(:last-child) {
+    border-right: 1px solid #c0b9b9;
+    padding-right: 10px;
+  }
+}
+.header {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+@media (min-width: 1000px) {
+  .header {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+  }
+  h1 {
+    padding: 5%;
+    padding-top: 10%;
+    font-size: 5rem;
+  }
+  .nav-menu .nav-link,
+  .nav-link-active {
+    font-size: 1.2rem;
+  }
+}
+/***********************************
+            FOOTER
+***********************************/
+footer {
+  background-color: var(--accent-color);
+  color: var(--bg-body-color);
+  width: 100%;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  text-align: center;
+  padding: 2rem 0rem;
+}
+
+/***********************************
+            INDEX
+***********************************/
+.galeria {
+  text-align: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  padding-bottom: 2rem;
+}
+@media (min-width: 767px) {
+  .galeria {
+    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+}
+
+.tarjeta {
+  padding: 1rem;
+}
+
+/***********************************
+            IMÁGENES
+***********************************/
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 60vh;
+}
+
+figcaption {
+  padding: 0rem 1rem;
+  margin: auto;
+  text-align: center;
+}
+
+@media (min-width: 767px) {
+  figure {
+    border: 1px solid var(--contrast-color);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    width: 85%;
+    overflow: hidden;
+    max-width: 50vw;
+  }
+  img {
+    display: flex;
+    max-width: 100%;
+  }
+  figcaption {
+    padding: 10px;
+    background-color: var(--bg-body-color);
+  }
+}
+/***********************************
+        CUERPO DE LAS PÁGINAS
+***********************************/
+main {
+  align-items: center;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  line-height: 1.5;
+  text-align: justify;
+}
+
+@media (min-width: 1000px) {
+  .body-general .h1 {
+    padding-top: 5rem;
+  }
+}
+/***********************************
+            FORMULARIO
+***********************************/
+form {
+  padding: 5% 10%;
+}
+
+form .ul {
+  list-style-type: none;
+}
+
+strong {
+  color: var(--contrast-color);
+}
+
+button {
+  border: none;
+  color: var(--accent-light-color);
+  background-color: var(--contrast-color);
+  padding: 1.5rem 2rem;
+  text-align: center;
+  display: block;
+  font-size: 1.2rem;
+  margin: 10px 0;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px var(--contrast-color);
+}
+
+button:hover {
+  color: var(--accent-color);
+  background-color: var(--accent-light-color);
+}
+
+button:active {
+  box-shadow: inset 0px 0px 10px rgba(0, 0, 0, 0.5019607843);
+}
+
+/*# sourceMappingURL=styles.css.map */
